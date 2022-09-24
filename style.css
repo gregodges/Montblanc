@@ -1,0 +1,353 @@
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+ul {
+    list-style: none
+}
+
+button,
+input,
+select {
+    margin: 0
+}
+
+html {
+    box-sizing: border-box
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit
+}
+
+img,
+video {
+    height: auto;
+    max-width: 100%
+}
+
+iframe {
+    border: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+td,
+th {
+    padding: 0
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+@font-face {
+    font-family: "Druk Text Wide Web Medium";
+    src: url(font/Druk\ Text\ Wide\ Web\ Medium\ Regular.otf);
+}
+
+:root {
+    --duration: .3s;
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+   
+}
+
+.main {
+    display: flex;
+}
+
+.nav__container {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 121px;
+    background-color: black;
+    
+}
+
+.nav__logo {
+    margin: 37px 110px 43px 52px;
+    font-size: 32px;
+    line-height: 1;
+}
+
+.nav__links {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: baseline;
+    color: white;
+}
+
+.nav__links li {
+    position: relative;
+    font-family: "Druk Text Wide Web Medium";
+    font-size: 14px;
+    margin-right: 50px;
+}
+
+.nav__links li a::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: white;
+    transform: scaleX(0);
+
+}
+
+.nav__links li:hover a::before {
+    transform: scaleX(1);
+    transform-origin: center;
+    transition: all .3s ease;
+}
+
+.header__wavy__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 464px;
+    height: 263px;
+    z-index: 1;
+}
+
+.picture__container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;;
+}
+
+.moto {
+    background-image: url(img/image\ 3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 380px;
+    ;
+    margin-right: 220px;
+    margin-top: 70px;
+    box-shadow: inset 0px -30px 40px 20px black;
+}
+
+.compteur {
+    background-image: url(img/compteur.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    width: 250px;
+    height: 500px;
+    z-index: 1;
+}
+
+.info__container {
+    position: relative;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    padding: 20px;
+}
+
+.power,
+.torque,
+.fuel,
+.speed {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 20px ;
+    width: 100%;
+}
+
+.info__container .info__card__title {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    writing-mode: vertical-lr;
+    text-orientation: sideways-right;
+    white-space: nowrap;
+    transform: rotate(180deg);
+    font-size: .6rem;
+    font-family: "Druk Text Wide Web Medium";
+    color: rgba(255, 255, 255, 0.206);
+}
+
+.info__card__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-left: 40px;
+}
+
+.info__card__top {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.info__card__bottom p:first-of-type {
+    font-family: "Druk Text Wide Web Medium";
+    font-size: 2rem;
+    color: white;
+    line-height: .9;
+}
+
+.info__card__bottom p:last-of-type {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.585);
+    line-height: .9;
+    
+
+}
+
+.japanese__title__container{
+    position: absolute;
+    width: 70%;
+    top: 60%;
+    left: 5px; 
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    margin-bottom: 40px;
+
+}
+.footer__carousel{
+    margin: 0 40px;
+    width: 50%;
+  
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Druk Text Wide Web Medium" ;
+    color: white;
+    font-size: 1rem;
+
+}
+.footer__carousel .blanc{
+    position: relative;
+    width: 300px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: white;
+}
+.footer__carousel .blanc::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: orange;
+    height: 2px;
+    width: 70%;
+
+}
+.footer__text {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10px;
+    width: 32%;
+    color: white;
+    line-height: 1.2rem;
+}
+.bas__moto{
+    position: absolute;
+    bottom: 0;
+    right: 350px;
+}
+.bas__moto img{
+    width: 200px;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
